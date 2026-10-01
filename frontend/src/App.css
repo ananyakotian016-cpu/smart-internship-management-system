@@ -1,0 +1,307 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f1f5f9;
+  color: #1e293b;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Main container */
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 35px;
+}
+
+/* Header */
+
+h1 {
+  margin: 0;
+  font-size: 32px;
+  color: #1e3a8a;
+}
+
+.subtitle {
+  margin-top: 8px;
+  margin-bottom: 35px;
+  color: #64748b;
+  font-size: 16px;
+}
+
+/* Section headings */
+
+h2 {
+  margin-top: 35px;
+  margin-bottom: 18px;
+  color: #1e3a8a;
+  font-size: 23px;
+}
+
+h3 {
+  margin-top: 25px;
+  color: #334155;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #dbe3ef;
+  margin: 40px 0;
+}
+
+/* =========================
+   DASHBOARD CARDS
+========================= */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-bottom: 30px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 15px rgba(30, 58, 138, 0.08);
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(30, 58, 138, 0.13);
+}
+
+.card h3 {
+  margin: 0;
+  color: #64748b;
+  font-size: 16px;
+}
+
+.card p {
+  margin: 12px 0 0;
+  font-size: 36px;
+  font-weight: bold;
+  color: #2563eb;
+}
+
+/* =========================
+   FORMS
+========================= */
+
+form {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 15px rgba(30, 58, 138, 0.07);
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  align-items: center;
+}
+
+input,
+select {
+  width: 100%;
+  height: 44px;
+  padding: 0 13px;
+
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+
+  background: #f8fafc;
+  color: #1e293b;
+
+  font-size: 14px;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #2563eb;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #475569;
+  margin-bottom: -10px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+  height: 44px;
+  padding: 0 18px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #2563eb;
+  color: white;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Cancel button */
+
+button[type="button"] {
+  background: #64748b;
+}
+
+button[type="button"]:hover {
+  background: #475569;
+}
+
+/* =========================
+   SEARCH
+========================= */
+
+.container > input {
+  width: 300px;
+  height: 44px;
+  margin-bottom: 15px;
+}
+
+/* =========================
+   TABLE
+========================= */
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+
+  background: white;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  box-shadow: 0 4px 15px rgba(30, 58, 138, 0.07);
+}
+
+thead {
+  background: #1e3a8a;
+  color: white;
+}
+
+th {
+  padding: 15px;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+td {
+  padding: 14px 15px;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 14px;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+tbody tr:hover {
+  background: #f8fafc;
+}
+
+/* Action buttons inside table */
+
+td button {
+  height: 36px;
+  padding: 0 12px;
+  margin: 2px;
+  font-size: 12px;
+}
+
+/* =========================
+   REPORT FILTER
+========================= */
+
+h3 + select {
+  width: 200px;
+  margin-bottom: 15px;
+}
+
+/* =========================
+   STATUS LOOK
+========================= */
+
+td:nth-child(6) {
+  font-weight: 600;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 1000px) {
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  form {
+    grid-template-columns: 1fr;
+  }
+
+  .container > input {
+    width: 100%;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
